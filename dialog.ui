@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Dialog</class>
+ <widget class="QDialog" name="Dialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>400</width>
+    <height>300</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>400</width>
+    <height>300</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>400</width>
+    <height>300</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>Initialization</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="qdarkstyle/style.qrc">
+    <normaloff>:/qss_icons/rc/while.jpg</normaloff>:/qss_icons/rc/while.jpg</iconset>
+  </property>
+  <widget class="QDialogButtonBox" name="buttonBox">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>240</y>
+     <width>341</width>
+     <height>32</height>
+    </rect>
+   </property>
+   <property name="orientation">
+    <enum>Qt::Horizontal</enum>
+   </property>
+   <property name="standardButtons">
+    <set>QDialogButtonBox::Cancel|QDialogButtonBox::Ok</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>40</x>
+     <y>20</y>
+     <width>107</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Size of the chip</string>
+   </property>
+  </widget>
+  <widget class="QSpinBox" name="chipSize">
+   <property name="geometry">
+    <rect>
+     <x>180</x>
+     <y>20</y>
+     <width>37</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <property name="minimum">
+    <number>5</number>
+   </property>
+   <property name="maximum">
+    <number>8</number>
+   </property>
+  </widget>
+  <widget class="QSpinBox" name="input1">
+   <property name="geometry">
+    <rect>
+     <x>180</x>
+     <y>60</y>
+     <width>37</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <property name="maximum">
+    <number>4</number>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_2">
+   <property name="geometry">
+    <rect>
+     <x>40</x>
+     <y>60</y>
+     <width>110</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Positions of input pipes</string>
+   </property>
+  </widget>
+  <widget class="QSpinBox" name="input2">
+   <property name="geometry">
+    <rect>
+     <x>180</x>
+     <y>90</y>
+     <width>37</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <property name="maximum">
+    <number>4</number>
+   </property>
+   <property name="value">
+    <number>0</number>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_4">
+   <property name="geometry">
+    <rect>
+     <x>40</x>
+     <y>130</y>
+     <width>118</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Positions of output pipes</string>
+   </property>
+  </widget>
+  <widget class="QSpinBox" name="output2">
+   <property name="geometry">
+    <rect>
+     <x>180</x>
+     <y>160</y>
+     <width>37</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <property name="maximum">
+    <number>4</number>
+   </property>
+   <property name="value">
+    <number>0</number>
+   </property>
+  </widget>
+  <widget class="QSpinBox" name="output1">
+   <property name="geometry">
+    <rect>
+     <x>180</x>
+     <y>130</y>
+     <width>37</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <property name="maximum">
+    <number>4</number>
+   </property>
+  </widget>
+  <widget class="QSpinBox" name="output3">
+   <property name="geometry">
+    <rect>
+     <x>180</x>
+     <y>190</y>
+     <width>37</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <property name="maximum">
+    <number>4</number>
+   </property>
+   <property name="value">
+    <number>0</number>
+   </property>
+  </widget>
+ </widget>
+ <tabstops>
+  <tabstop>chipSize</tabstop>
+  <tabstop>input1</tabstop>
+  <tabstop>input2</tabstop>
+  <tabstop>output1</tabstop>
+  <tabstop>output2</tabstop>
+  <tabstop>output3</tabstop>
+ </tabstops>
+ <resources>
+  <include location="qdarkstyle/style.qrc"/>
+ </resources>
+ <connections>
+  <connection>
+   <sender>buttonBox</sender>
+   <signal>accepted()</signal>
+   <receiver>Dialog</receiver>
+   <slot>accept()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>248</x>
+     <y>254</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>157</x>
+     <y>274</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>buttonBox</sender>
+   <signal>rejected()</signal>
+   <receiver>Dialog</receiver>
+   <slot>reject()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>316</x>
+     <y>260</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>286</x>
+     <y>274</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>
